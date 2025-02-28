@@ -53,15 +53,17 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
+				fashion: {
+					50: '#fdf7f9',
+					100: '#fcf0f4',
+					200: '#fad6e3',
+					300: '#f7b0ca',
+					400: '#f282a9',
+					500: '#e65c87',
+					600: '#d33e6b',
+					700: '#b12a52',
+					800: '#912545',
+					900: '#78233d',
 				}
 			},
 			borderRadius: {
@@ -71,7 +73,8 @@ export default {
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
-				display: ['SF Pro Display', 'Inter', 'sans-serif']
+				display: ['Playfair Display', 'serif'],
+				body: ['Inter', 'sans-serif']
 			},
 			keyframes: {
 				'accordion-down': {

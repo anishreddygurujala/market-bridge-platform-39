@@ -1,14 +1,12 @@
 
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { 
-  Globe, LineChart, Search, Instagram, ShoppingCart, BarChart2, 
-  Code, Smartphone, Zap, FileText, Mail, ArrowRight 
+  Gem, Crown, Heart, Leaf, Star, Sparkles, ShoppingBag
 } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
-const Services = () => {
+const Collections = () => {
   useEffect(() => {
     const handleIntersection = (entries: IntersectionObserverEntry[]) => {
       entries.forEach(entry => {
@@ -29,119 +27,96 @@ const Services = () => {
     return () => observer.disconnect();
   }, []);
 
-  const services = [
+  const collections = [
     {
-      id: "website-development",
-      title: "Website Development",
-      description: "We create beautiful, responsive websites that are designed to convert visitors into customers. Our development process ensures that your website is not only visually appealing but also optimized for performance and search engines.",
+      id: "jewelry",
+      title: "Jewelry Collection",
+      description: "Our jewelry collection celebrates feminine strength through timeless designs that blend traditional craftsmanship with contemporary aesthetics. Each piece tells a story of heritage and empowerment.",
       features: [
-        "Custom design and development",
-        "Responsive and mobile-friendly",
-        "SEO-optimized structure",
-        "Fast loading speeds",
-        "User-friendly navigation",
-        "Integration with analytics"
+        "Handcrafted by women artisans",
+        "Ethically sourced materials",
+        "Traditional motifs with modern designs",
+        "Symbolic elements that celebrate heritage",
+        "Pieces for everyday wear and special occasions",
+        "Custom designs available"
       ],
-      icon: <Globe className="h-6 w-6" />,
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+      icon: <Gem className="h-6 w-6" />,
+      image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop"
     },
     {
-      id: "digital-marketing",
-      title: "Digital Marketing",
-      description: "Our comprehensive digital marketing strategies help businesses reach their target audience, increase brand awareness, and drive conversions. We use data-driven approaches to ensure your marketing budget is spent effectively.",
+      id: "fashion",
+      title: "Fashion Collection",
+      description: "Our clothing line embraces the rich textile traditions of our heritage while offering modern silhouettes that celebrate the beauty and strength of women. From casual wear to statement pieces, our fashion collection empowers through elegance.",
       features: [
-        "Customized marketing strategies",
-        "Campaign planning and execution",
-        "Budget optimization",
-        "Performance tracking",
-        "Competitor analysis",
-        "Target audience research"
+        "Sustainable and ethical fabrics",
+        "Traditional embroidery techniques",
+        "Comfortable yet elegant designs",
+        "Versatile pieces for various occasions",
+        "Inclusive sizing options",
+        "Seasonless approach to fashion"
       ],
-      icon: <LineChart className="h-6 w-6" />,
-      image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a"
+      icon: <Crown className="h-6 w-6" />,
+      image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1000&auto=format&fit=crop"
     },
     {
-      id: "seo",
-      title: "SEO Optimization",
-      description: "Improve your website's visibility in search engines with our SEO services. We focus on sustainable, white-hat techniques that build long-term success and protect your website from algorithm updates.",
+      id: "heritage",
+      title: "Heritage Line",
+      description: "The Heritage Line pays homage to the rich cultural tapestry of the Bani Saad tribe. These limited edition pieces feature intricate designs and symbols that have been passed down through generations, preserving our cultural legacy.",
       features: [
-        "Keyword research and analysis",
-        "On-page SEO optimization",
-        "Technical SEO improvements",
-        "Content strategy development",
-        "Link building strategies",
-        "Regular performance reporting"
+        "Designs inspired by tribal symbols",
+        "Limited edition collections",
+        "Educational component with each piece",
+        "Collaborative projects with tribal elders",
+        "Revival of traditional techniques",
+        "Premium materials and craftsmanship"
       ],
-      icon: <Search className="h-6 w-6" />,
-      image: "https://images.unsplash.com/photo-1562577309-4932fdd64cd1"
+      icon: <Heart className="h-6 w-6" />,
+      image: "https://images.unsplash.com/photo-1509319117193-57bab727e09d?q=80&w=1000&auto=format&fit=crop"
     },
     {
-      id: "social-media",
-      title: "Social Media Management",
-      description: "Build a strong presence on social media platforms with our management services. We handle everything from content creation to community engagement, allowing you to focus on running your business.",
+      id: "sustainable",
+      title: "Sustainable Collection",
+      description: "Our commitment to the planet is reflected in our Sustainable Collection, which uses eco-friendly materials and practices. These pieces demonstrate that luxury can be achieved while honoring our responsibility to the environment.",
       features: [
-        "Platform strategy development",
-        "Content creation and curation",
-        "Community management",
-        "Paid social campaigns",
-        "Performance analytics",
-        "Competitor monitoring"
+        "Recycled metals and gemstones",
+        "Organic and natural fabrics",
+        "Zero-waste design principles",
+        "Water conservation in production",
+        "Plastic-free packaging",
+        "Carbon-neutral shipping options"
       ],
-      icon: <Instagram className="h-6 w-6" />,
-      image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7"
+      icon: <Leaf className="h-6 w-6" />,
+      image: "https://images.unsplash.com/photo-1562157873-818bc0726f68?q=80&w=1000&auto=format&fit=crop"
     },
     {
-      id: "ecommerce",
-      title: "E-commerce Solutions",
-      description: "Transform your business with our e-commerce solutions. We build online stores that are easy to manage, secure, and designed to maximize sales through an optimized customer journey.",
+      id: "bridal",
+      title: "Bridal Collection",
+      description: "Our Bridal Collection celebrates one of life's most significant moments with pieces that honor tradition while embracing modern sensibilities. Each piece is designed to make a woman feel her most beautiful on her special day.",
       features: [
-        "Store setup and configuration",
-        "Payment gateway integration",
-        "Inventory management systems",
-        "Mobile shopping optimization",
-        "Product listing optimization",
-        "Checkout process improvement"
+        "Custom designs available",
+        "Heirloom quality craftsmanship",
+        "Traditional and contemporary options",
+        "Matching sets for bridal parties",
+        "Consultation services available",
+        "Pre and post-wedding looks"
       ],
-      icon: <ShoppingCart className="h-6 w-6" />,
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d"
+      icon: <Star className="h-6 w-6" />,
+      image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=1000&auto=format&fit=crop"
     },
     {
-      id: "analytics",
-      title: "Analytics & Reporting",
-      description: "Gain valuable insights into your digital performance with our analytics and reporting services. We track key metrics and provide actionable recommendations to improve your results.",
+      id: "limited",
+      title: "Limited Edition",
+      description: "Our Limited Edition collections feature exclusive designs created in collaboration with guest designers and artisans. These unique pieces represent the intersection of diverse creative visions while maintaining our commitment to empowerment and heritage.",
       features: [
-        "Custom dashboard creation",
-        "Key metric tracking",
-        "User behavior analysis",
-        "Conversion funnel optimization",
-        "Regular performance reports",
-        "Data-driven recommendations"
+        "Exclusive designs with limited runs",
+        "Collaborative projects with guest artisans",
+        "Certificate of authenticity",
+        "Numbered pieces",
+        "Special packaging and presentation",
+        "Collector's value"
       ],
-      icon: <BarChart2 className="h-6 w-6" />,
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f"
-    }
-  ];
-
-  const additionalServices = [
-    {
-      title: "Web Application Development",
-      icon: <Code className="h-5 w-5" />
-    },
-    {
-      title: "Mobile Responsive Design",
-      icon: <Smartphone className="h-5 w-5" />
-    },
-    {
-      title: "Performance Optimization",
-      icon: <Zap className="h-5 w-5" />
-    },
-    {
-      title: "Content Creation",
-      icon: <FileText className="h-5 w-5" />
-    },
-    {
-      title: "Email Marketing",
-      icon: <Mail className="h-5 w-5" />
+      icon: <Sparkles className="h-6 w-6" />,
+      image: "https://images.unsplash.com/photo-1611085583191-a3b181a88401?q=80&w=1000&auto=format&fit=crop"
     }
   ];
 
@@ -150,32 +125,32 @@ const Services = () => {
       <Navigation />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="section-padding bg-gray-50">
+        <section className="section-padding bg-fashion-50">
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto text-center space-y-4">
-              <span className="inline-block font-medium text-sm px-3 py-1 bg-black text-white rounded-full animate-on-scroll">
-                Our Services
+              <span className="inline-block font-medium text-sm px-3 py-1 bg-primary text-white rounded-full animate-on-scroll">
+                Our Collections
               </span>
               <h1 className="text-4xl md:text-5xl font-display font-bold animate-on-scroll">
-                Comprehensive Digital Solutions
+                Exquisite Designs with Purpose
               </h1>
               <p className="text-gray-600 text-lg md:text-xl animate-on-scroll">
-                We offer a full spectrum of digital marketing and development services
-                to help your business thrive in the digital landscape.
+                Discover our curated collections of jewelry and fashion that celebrate 
+                heritage, craftsmanship, and the empowerment of women.
               </p>
             </div>
           </div>
         </section>
         
-        {/* Services Section */}
+        {/* Collections Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
-            {services.map((service, index) => (
+            {collections.map((collection, index) => (
               <div 
                 key={index}
-                id={service.id}
+                id={collection.id}
                 className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                  index !== 0 ? 'mt-20 pt-20 border-t border-gray-100' : ''
+                  index !== 0 ? 'mt-20 pt-20 border-t border-fashion-100' : ''
                 }`}
               >
                 <div 
@@ -183,23 +158,23 @@ const Services = () => {
                     index % 2 === 1 ? 'lg:order-2' : ''
                   }`}
                 >
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gray-100 text-gray-900">
-                    {service.icon}
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-fashion-50 text-fashion-700">
+                    {collection.icon}
                   </div>
                   
                   <h2 className="text-3xl md:text-4xl font-display font-bold">
-                    {service.title}
+                    {collection.title}
                   </h2>
                   
                   <p className="text-gray-600">
-                    {service.description}
+                    {collection.description}
                   </p>
                   
                   <ul className="space-y-3">
-                    {service.features.map((feature, featureIndex) => (
+                    {collection.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start">
                         <svg 
-                          className="h-5 w-5 text-black mt-1 mr-3 flex-shrink-0" 
+                          className="h-5 w-5 text-fashion-700 mt-1 mr-3 flex-shrink-0" 
                           fill="none" 
                           viewBox="0 0 24 24" 
                           stroke="currentColor"
@@ -215,6 +190,18 @@ const Services = () => {
                       </li>
                     ))}
                   </ul>
+                  
+                  <div>
+                    <a 
+                      href={`https://banisaad.myshopify.com/collections/${collection.id}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-medium rounded-md transition-all duration-300 hover:bg-primary/90"
+                    >
+                      Shop This Collection
+                      <ShoppingBag className="ml-2 h-4 w-4" />
+                    </a>
+                  </div>
                 </div>
                 
                 <div 
@@ -222,11 +209,11 @@ const Services = () => {
                     index % 2 === 1 ? 'lg:order-1' : ''
                   }`}
                 >
-                  <div className="absolute inset-0 bg-gray-100 rounded-2xl transform rotate-2 -z-10"></div>
+                  <div className="absolute inset-0 bg-fashion-50 rounded-2xl transform rotate-2 -z-10"></div>
                   <div className="relative overflow-hidden rounded-xl shadow-lg">
                     <img 
-                      src={service.image} 
-                      alt={service.title} 
+                      src={collection.image} 
+                      alt={collection.title} 
                       className="w-full h-auto object-cover aspect-[4/3]"
                       loading="lazy"
                     />
@@ -237,56 +224,25 @@ const Services = () => {
           </div>
         </section>
         
-        {/* Additional Services */}
-        <section className="section-padding bg-gray-50">
-          <div className="container mx-auto">
-            <div className="max-w-xl mx-auto text-center mb-12">
-              <span className="inline-block font-medium text-sm px-3 py-1 bg-gray-100 text-gray-800 rounded-full animate-on-scroll">
-                More Services
-              </span>
-              <h2 className="text-3xl md:text-4xl font-display font-bold mt-4 mb-4 animate-on-scroll">
-                Additional Expertise
-              </h2>
-              <p className="text-gray-600 animate-on-scroll">
-                Beyond our core services, we offer specialized solutions to address your unique business needs.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 stagger-animation">
-              {additionalServices.map((service, index) => (
-                <div 
-                  key={index} 
-                  className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 text-center animate-on-scroll card-hover"
-                >
-                  <div className="mx-auto mb-4 inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 text-gray-900">
-                    {service.icon}
-                  </div>
-                  <h3 className="text-base font-semibold">{service.title}</h3>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-        
-        {/* CTA Section */}
-        <section className="section-padding bg-black text-white">
+        {/* Custom Orders */}
+        <section className="section-padding bg-fashion-700 text-white">
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto text-center space-y-6">
               <h2 className="text-3xl md:text-4xl font-display font-bold animate-on-scroll">
-                Ready to Grow Your Business?
+                Custom Designs Available
               </h2>
-              <p className="text-gray-300 max-w-2xl mx-auto animate-on-scroll">
-                Contact us today to discuss your project and discover how our services
-                can help you achieve your business goals.
+              <p className="text-white/80 max-w-2xl mx-auto animate-on-scroll">
+                Looking for something uniquely yours? Our artisans can create custom pieces 
+                that honor your personal story while maintaining our commitment to heritage 
+                and empowerment.
               </p>
               <div className="animate-on-scroll">
-                <Link 
-                  to="/contact" 
-                  className="inline-flex items-center justify-center px-8 py-3 bg-white text-gray-900 font-medium rounded-md transition-all duration-300 hover:bg-gray-100"
+                <a 
+                  href="mailto:custom@banisaad.com"
+                  className="inline-flex items-center justify-center px-8 py-3 bg-white text-fashion-700 font-medium rounded-md transition-all duration-300 hover:bg-gray-100"
                 >
-                  Get in Touch
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
+                  Inquire About Custom Orders
+                </a>
               </div>
             </div>
           </div>
@@ -297,4 +253,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Collections;

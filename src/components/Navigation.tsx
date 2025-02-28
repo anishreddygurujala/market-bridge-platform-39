@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ShoppingBag } from 'lucide-react';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,9 +19,9 @@ const Navigation = () => {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'Services', path: '/services' },
     { name: 'About', path: '/about' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Collections', path: '/services' },
+    { name: 'Our Story', path: '/contact' },
   ];
 
   return (
@@ -34,8 +34,8 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
-        <NavLink to="/" className="font-display text-xl font-semibold tracking-tight">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-black to-gray-600">
+        <NavLink to="/" className="font-display text-xl md:text-2xl font-semibold tracking-tight">
+          <span className="text-primary">
             Bani Saad
           </span>
         </NavLink>
@@ -48,10 +48,10 @@ const Navigation = () => {
                 <NavLink 
                   to={link.path}
                   className={({ isActive }) => 
-                    `relative font-medium px-1 py-2 transition-colors duration-300
+                    `relative font-medium px-1 py-2 transition-colors duration-300 elegant-underline
                     ${isActive 
-                      ? 'text-black after:content-[""] after:absolute after:w-full after:h-0.5 after:bg-black after:bottom-0 after:left-0' 
-                      : 'text-gray-600 hover:text-black'
+                      ? 'text-primary after:w-full' 
+                      : 'text-gray-600 hover:text-primary'
                     }`
                   }
                 >
@@ -61,6 +61,17 @@ const Navigation = () => {
             ))}
           </ul>
         </nav>
+
+        {/* Shop Button */}
+        <a 
+          href="https://banisaad.myshopify.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="hidden md:flex items-center space-x-2 bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-md transition-colors"
+        >
+          <ShoppingBag className="h-4 w-4" />
+          <span>Shop Now</span>
+        </a>
 
         {/* Mobile Menu Button */}
         <button 
@@ -91,8 +102,8 @@ const Navigation = () => {
                   className={({ isActive }) => 
                     `block py-2 font-medium transition-colors duration-300
                     ${isActive 
-                      ? 'text-black' 
-                      : 'text-gray-600 hover:text-black'
+                      ? 'text-primary' 
+                      : 'text-gray-600 hover:text-primary'
                     }`
                   }
                   onClick={() => setIsMenuOpen(false)}
@@ -101,6 +112,18 @@ const Navigation = () => {
                 </NavLink>
               </li>
             ))}
+            <li>
+              <a 
+                href="https://banisaad.myshopify.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 bg-primary text-white px-4 py-2 rounded-md w-full justify-center"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <ShoppingBag className="h-4 w-4" />
+                <span>Shop Now</span>
+              </a>
+            </li>
           </ul>
         </nav>
       </div>

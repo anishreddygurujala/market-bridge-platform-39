@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  LineChart, BarChart2, Globe, Search, Instagram, ShoppingCart, Users, ArrowRight 
+  Gem, ShoppingBag, Heart, Sparkles, Leaf, Globe, ArrowRight 
 } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
@@ -30,44 +30,66 @@ const Index = () => {
     return () => observer.disconnect();
   }, []);
 
-  const services = [
+  const collections = [
     {
-      icon: <Globe className="w-6 h-6" />,
-      title: "Website Development",
-      description: "Custom websites built for performance, user experience, and business growth."
+      icon: <Gem className="w-6 h-6" />,
+      title: "Exquisite Jewelry",
+      description: "Timeless pieces that celebrate feminine grace and power through traditional craftsmanship and modern design.",
+      imageUrl: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop"
     },
     {
-      icon: <LineChart className="w-6 h-6" />,
-      title: "Digital Marketing",
-      description: "Data-driven campaigns that deliver measurable ROI and customer acquisition."
+      icon: <ShoppingBag className="w-6 h-6" />,
+      title: "Elegant Fashion",
+      description: "Clothing that blends cultural heritage with contemporary aesthetics, creating unique expressions of identity.",
+      imageUrl: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1000&auto=format&fit=crop"
     },
     {
-      icon: <Search className="w-6 h-6" />,
-      title: "SEO Optimization",
-      description: "Improve visibility and drive organic traffic through search engine optimization."
-    },
-    {
-      icon: <Instagram className="w-6 h-6" />,
-      title: "Social Media Management",
-      description: "Engaging content and management strategies for brand growth on social platforms."
-    },
-    {
-      icon: <ShoppingCart className="w-6 h-6" />,
-      title: "E-commerce Solutions",
-      description: "Complete online store setup with payment integration and inventory management."
-    },
-    {
-      icon: <BarChart2 className="w-6 h-6" />,
-      title: "Analytics & Reporting",
-      description: "Detailed insights and reports to track performance and guide future strategies."
+      icon: <Heart className="w-6 h-6" />,
+      title: "Heritage Collection",
+      description: "Designs inspired by the rich cultural tapestry of the Bani Saad tribe, preserving traditions for future generations.",
+      imageUrl: "https://images.unsplash.com/photo-1611085583191-a3b181a88401?q=80&w=1000&auto=format&fit=crop"
     }
   ];
 
-  const stats = [
-    { number: "500+", label: "Projects Completed" },
-    { number: "98%", label: "Client Satisfaction" },
-    { number: "250+", label: "Active Clients" },
-    { number: "8+", label: "Years Experience" }
+  const values = [
+    {
+      icon: <Heart className="w-6 h-6" />,
+      title: "Women Empowerment",
+      description: "Supporting women artisans with tools and resources to craft their dreams and achieve economic independence."
+    },
+    {
+      icon: <Sparkles className="w-6 h-6" />,
+      title: "Cultural Heritage",
+      description: "Honoring our rich cultural traditions by incorporating tribal elements into contemporary designs."
+    },
+    {
+      icon: <Leaf className="w-6 h-6" />,
+      title: "Sustainability",
+      description: "Commitment to ethical sourcing and sustainable practices that respect our planet and its resources."
+    },
+    {
+      icon: <Globe className="w-6 h-6" />,
+      title: "Global Community",
+      description: "Creating a worldwide network of women who celebrate their heritage and support each other's growth."
+    }
+  ];
+
+  const testimonials = [
+    {
+      quote: "These pieces aren't just beautiful—they tell a story of empowerment that resonates with me every time I wear them.",
+      author: "Layla A.",
+      location: "Dubai"
+    },
+    {
+      quote: "Bani Saad's commitment to sustainability while honoring heritage is exactly what modern luxury should be about.",
+      author: "Sarah M.",
+      location: "New York"
+    },
+    {
+      quote: "As a woman entrepreneur myself, I'm inspired by what this brand stands for. The quality and craftsmanship are exceptional.",
+      author: "Noor K.",
+      location: "Riyadh"
+    }
   ];
 
   return (
@@ -76,55 +98,75 @@ const Index = () => {
       <main>
         <Hero />
         
-        {/* Services Section */}
+        {/* Collections Section */}
         <section className="section-padding bg-white">
           <div className="container mx-auto">
             <div className="max-w-xl mx-auto text-center mb-12 md:mb-16">
-              <span className="inline-block font-medium text-sm px-3 py-1 bg-gray-100 text-gray-800 rounded-full animate-on-scroll">
-                Our Services
+              <span className="inline-block font-medium text-sm px-3 py-1 bg-fashion-100 text-fashion-700 rounded-full animate-on-scroll">
+                Our Collections
               </span>
               <h2 className="text-3xl md:text-4xl font-display font-bold mt-4 mb-4 animate-on-scroll">
-                Comprehensive Digital Solutions
+                Timeless Elegance
               </h2>
               <p className="text-gray-600 animate-on-scroll">
-                We offer a full spectrum of digital marketing and development services
-                to help your business thrive in the digital landscape.
+                Discover our curated collections of jewelry and fashion pieces that 
+                celebrate heritage, craftsmanship, and the empowerment of women.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 stagger-animation">
-              {services.map((service, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 stagger-animation">
+              {collections.map((collection, index) => (
                 <ServiceCard
                   key={index}
-                  icon={service.icon}
-                  title={service.title}
-                  description={service.description}
+                  icon={collection.icon}
+                  title={collection.title}
+                  description={collection.description}
+                  imageUrl={collection.imageUrl}
                 />
               ))}
             </div>
             
             <div className="text-center mt-12 animate-on-scroll">
-              <Link 
-                to="/services" 
-                className="inline-flex items-center justify-center px-6 py-3 bg-transparent border border-gray-300 text-gray-800 font-medium rounded-md transition-all duration-300 hover:bg-gray-50 hover:border-gray-400"
+              <a 
+                href="https://banisaad.myshopify.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-medium rounded-md transition-all duration-300 hover:bg-primary/90"
               >
-                View All Services
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+                Shop All Collections
+                <ShoppingBag className="ml-2 h-4 w-4" />
+              </a>
             </div>
           </div>
         </section>
         
-        {/* Stats Section */}
-        <section className="section-padding bg-gray-50">
+        {/* Our Values Section */}
+        <section className="section-padding bg-fashion-50">
           <div className="container mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center animate-on-scroll">
-                  <div className="text-4xl md:text-5xl font-display font-bold text-black mb-2">
-                    {stat.number}
+            <div className="max-w-xl mx-auto text-center mb-12 md:mb-16">
+              <span className="inline-block font-medium text-sm px-3 py-1 bg-white text-fashion-700 rounded-full animate-on-scroll">
+                Our Values
+              </span>
+              <h2 className="text-3xl md:text-4xl font-display font-bold mt-4 mb-4 animate-on-scroll">
+                More Than Just Fashion
+              </h2>
+              <p className="text-gray-600 animate-on-scroll">
+                At Bani Saad, our commitment extends beyond creating beautiful pieces; 
+                we stand for empowerment, heritage, and sustainable craftsmanship.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 stagger-animation">
+              {values.map((value, index) => (
+                <div 
+                  key={index} 
+                  className="bg-white rounded-xl p-6 shadow-sm border border-fashion-100 animate-on-scroll card-hover"
+                >
+                  <div className="mb-5 inline-flex items-center justify-center w-12 h-12 rounded-full bg-fashion-50 text-fashion-700">
+                    {value.icon}
                   </div>
-                  <p className="text-gray-600">{stat.label}</p>
+                  <h3 className="text-xl font-display font-semibold mb-3">{value.title}</h3>
+                  <p className="text-gray-600">{value.description}</p>
                 </div>
               ))}
             </div>
@@ -136,50 +178,40 @@ const Index = () => {
           <div className="container mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6 animate-on-scroll">
-                <span className="inline-block font-medium text-sm px-3 py-1 bg-gray-100 text-gray-800 rounded-full">
-                  About Us
+                <span className="inline-block font-medium text-sm px-3 py-1 bg-fashion-100 text-fashion-700 rounded-full">
+                  Our Story
                 </span>
                 <h2 className="text-3xl md:text-4xl font-display font-bold text-balance">
-                  We Help Businesses Grow Their Digital Presence
+                  The Legacy of Bani Saad
                 </h2>
                 <p className="text-gray-600">
-                  Bani Saad is a full-service digital marketing and website development agency 
-                  dedicated to helping businesses establish and grow their online presence. 
-                  With a team of experienced professionals, we deliver tailored solutions that 
-                  align with your business goals and drive results.
+                  Inspired by the rich cultural tapestry of the Bani Saad tribe, our mission is to empower 
+                  women globally to reclaim their narratives through exquisite fashion and timeless jewelry. 
+                  We believe that when women thrive, communities flourish.
                 </p>
-                <ul className="space-y-3">
-                  {[
-                    "Strategic approach to digital marketing",
-                    "Custom website solutions for your business",
-                    "Data-driven decision making",
-                    "Dedicated support and customer service"
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-center">
-                      <svg className="h-5 w-5 text-black mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+                <p className="text-gray-600">
+                  Our commitment to elegance extends beyond aesthetics; it is woven into the very fabric 
+                  of our purpose. By providing women artisans with the tools and resources to craft their 
+                  dreams, we ignite a renaissance of creativity and economic independence that resonates 
+                  far and wide.
+                </p>
                 <div>
                   <Link 
                     to="/about" 
-                    className="inline-flex items-center justify-center px-6 py-3 bg-black text-white font-medium rounded-md transition-all duration-300 hover:bg-gray-800"
+                    className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-medium rounded-md transition-all duration-300 hover:bg-primary/90"
                   >
-                    Learn More About Us
+                    Discover Our Journey
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </div>
               </div>
               
               <div className="relative animate-on-scroll">
-                <div className="absolute inset-0 bg-gray-100 rounded-2xl transform rotate-3 -z-10"></div>
+                <div className="absolute inset-0 bg-fashion-50 rounded-2xl transform rotate-3 -z-10"></div>
                 <div className="relative overflow-hidden rounded-xl shadow-lg">
                   <img 
-                    src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" 
-                    alt="Our Team" 
+                    src="https://images.unsplash.com/photo-1551533257-bdf72cec6fa1?q=80&w=1000&auto=format&fit=crop" 
+                    alt="Artisan crafting jewelry" 
                     className="w-full h-auto object-cover aspect-[4/3]"
                     loading="lazy"
                   />
@@ -189,25 +221,57 @@ const Index = () => {
           </div>
         </section>
         
-        {/* CTA Section */}
-        <section className="section-padding bg-gray-900 text-white">
+        {/* Testimonials */}
+        <section className="section-padding bg-fashion-700 text-white">
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto text-center space-y-6">
               <h2 className="text-3xl md:text-4xl font-display font-bold animate-on-scroll">
-                Ready to Transform Your Digital Presence?
+                Voices of Our Community
               </h2>
-              <p className="text-gray-300 max-w-2xl mx-auto animate-on-scroll">
-                Let's work together to create a tailored digital strategy that helps your business 
-                reach its full potential in the digital world.
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 stagger-animation">
+                {testimonials.map((testimonial, index) => (
+                  <div key={index} className="animate-on-scroll">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-left h-full flex flex-col">
+                      <div className="mb-4 text-fashion-100">
+                        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                        </svg>
+                      </div>
+                      <p className="text-white/90 mb-4 flex-grow">{testimonial.quote}</p>
+                      <div>
+                        <p className="font-semibold">{testimonial.author}</p>
+                        <p className="text-white/70 text-sm">{testimonial.location}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* CTA Section */}
+        <section className="section-padding bg-fashion-50">
+          <div className="container mx-auto">
+            <div className="max-w-3xl mx-auto text-center space-y-6">
+              <h2 className="text-3xl md:text-4xl font-display font-bold animate-on-scroll">
+                Join Our Movement
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto animate-on-scroll">
+                Become part of our community of women who celebrate heritage, craftsmanship, 
+                and empowerment through exquisite fashion and jewelry.
               </p>
               <div className="animate-on-scroll">
-                <Link 
-                  to="/contact" 
-                  className="inline-flex items-center justify-center px-8 py-3 bg-white text-gray-900 font-medium rounded-md transition-all duration-300 hover:bg-gray-100"
+                <a 
+                  href="https://banisaad.myshopify.com" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-8 py-3 bg-primary text-white font-medium rounded-md transition-all duration-300 hover:bg-primary/90"
                 >
-                  Get Started Today
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
+                  Shop Our Collections
+                  <ShoppingBag className="ml-2 h-4 w-4" />
+                </a>
               </div>
             </div>
           </div>
