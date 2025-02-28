@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -41,13 +40,13 @@ const Index = () => {
       icon: <ShoppingBag className="w-6 h-6" />,
       title: "Elegant Fashion",
       description: "Clothing that blends cultural heritage with contemporary aesthetics, creating unique expressions of identity.",
-      imageUrl: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1000&auto=format&fit=crop"
+      imageUrl: "https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?q=80&w=1000&auto=format&fit=crop"
     },
     {
       icon: <Heart className="w-6 h-6" />,
       title: "Heritage Collection",
       description: "Designs inspired by the rich cultural tapestry of the Bani Saad tribe, preserving traditions for future generations.",
-      imageUrl: "https://images.unsplash.com/photo-1611085583191-a3b181a88401?q=80&w=1000&auto=format&fit=crop"
+      imageUrl: "https://images.unsplash.com/photo-1606131731446-5568d87113aa?q=80&w=1000&auto=format&fit=crop"
     }
   ];
 
@@ -210,7 +209,7 @@ const Index = () => {
                 <div className="absolute inset-0 bg-fashion-50 rounded-2xl transform rotate-3 -z-10"></div>
                 <div className="relative overflow-hidden rounded-xl shadow-lg">
                   <img 
-                    src="https://images.unsplash.com/photo-1551533257-bdf72cec6fa1?q=80&w=1000&auto=format&fit=crop" 
+                    src="https://images.unsplash.com/photo-1504198322253-cfa87a0ff60f?q=80&w=1000&auto=format&fit=crop" 
                     alt="Artisan crafting jewelry" 
                     className="w-full h-auto object-cover aspect-[4/3]"
                     loading="lazy"

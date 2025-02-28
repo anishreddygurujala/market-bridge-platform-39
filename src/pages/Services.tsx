@@ -56,7 +56,7 @@ const Collections = () => {
         "Seasonless approach to fashion"
       ],
       icon: <Crown className="h-6 w-6" />,
-      image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1000&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1552874869-5c39ec9288dc?q=80&w=1000&auto=format&fit=crop"
     },
     {
       id: "heritage",
@@ -71,7 +71,7 @@ const Collections = () => {
         "Premium materials and craftsmanship"
       ],
       icon: <Heart className="h-6 w-6" />,
-      image: "https://images.unsplash.com/photo-1509319117193-57bab727e09d?q=80&w=1000&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1606131731446-5568d87113aa?q=80&w=1000&auto=format&fit=crop"
     },
     {
       id: "sustainable",
@@ -86,7 +86,7 @@ const Collections = () => {
         "Carbon-neutral shipping options"
       ],
       icon: <Leaf className="h-6 w-6" />,
-      image: "https://images.unsplash.com/photo-1562157873-818bc0726f68?q=80&w=1000&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?q=80&w=1000&auto=format&fit=crop"
     },
     {
       id: "bridal",
@@ -101,7 +101,7 @@ const Collections = () => {
         "Pre and post-wedding looks"
       ],
       icon: <Star className="h-6 w-6" />,
-      image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=1000&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1610222034376-8dd1149e0e60?q=80&w=1000&auto=format&fit=crop"
     },
     {
       id: "limited",
@@ -116,7 +116,7 @@ const Collections = () => {
         "Collector's value"
       ],
       icon: <Sparkles className="h-6 w-6" />,
-      image: "https://images.unsplash.com/photo-1611085583191-a3b181a88401?q=80&w=1000&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?q=80&w=1000&auto=format&fit=crop"
     }
   ];
 

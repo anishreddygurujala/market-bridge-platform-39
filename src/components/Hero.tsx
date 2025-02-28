@@ -72,8 +72,8 @@ const Hero = () => {
               <div className="absolute -inset-4 bg-gradient-to-r from-fashion-100 to-fashion-50 rounded-2xl -z-10 transform rotate-2"></div>
               <div className="relative overflow-hidden rounded-xl shadow-lg">
                 <img 
-                  src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1976&auto=format&fit=crop"
-                  alt="Elegant woman with jewelry" 
+                  src="https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?q=80&w=1976&auto=format&fit=crop"
+                  alt="Elegant modest fashion with jewelry" 
                   className="w-full h-auto object-cover aspect-[4/3]"
                   loading="eager"
                 />
