@@ -34,7 +34,7 @@ const About = () => {
     {
       icon: <Sparkles className="h-6 w-6" />,
       title: "Cultural Heritage",
-      description: "We honor the rich cultural traditions of the Bani Saad tribe by incorporating tribal elements into contemporary designs."
+      description: "We honor rich cultural traditions by incorporating heritage elements into contemporary designs."
     },
     {
       icon: <Leaf className="h-6 w-6" />,
@@ -118,12 +118,12 @@ const About = () => {
                 </h2>
                 <div className="space-y-4 text-gray-600">
                   <p>
-                    Bani Saad was born from a vision to honor the rich heritage of our ancestral tribe 
+                    Bani Saad was born from a vision to honor rich heritage 
                     while creating pathways for women to achieve economic independence through artistry 
                     and craftsmanship.
                   </p>
                   <p>
-                    Inspired by the intricate designs and symbolic elements of our cultural heritage, 
+                    Inspired by intricate designs and symbolic elements of cultural heritage, 
                     our founder Fatima Al-Saad began working with women artisans from her community to 
                     create jewelry and fashion pieces that told stories of resilience and beauty.
                   </p>
@@ -158,10 +158,9 @@ const About = () => {
                   a renaissance of creativity and economic independence that resonates far and wide.
                 </p>
                 <p className="text-white/80 text-lg">
-                  As the proud descendants of a lineage dedicated to uplifting communities, we honor our 
-                  heritage by championing sustainable practices and ethical craftsmanship. Our collections are 
-                  more than mere adornments; they are symbols of strength, resilience, and the enduring spirit 
-                  of women who shape the world.
+                  As proud ambassadors of cultural heritage, we honor traditions by championing sustainable practices 
+                  and ethical craftsmanship. Our collections are more than mere adornments; they are symbols of strength, 
+                  resilience, and the enduring spirit of women who shape the world.
                 </p>
               </div>
             </div>

@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -45,7 +46,7 @@ const Index = () => {
     {
       icon: <Heart className="w-6 h-6" />,
       title: "Heritage Collection",
-      description: "Designs inspired by the rich cultural tapestry of the Bani Saad tribe, preserving traditions for future generations.",
+      description: "Designs inspired by rich cultural traditions, preserving heritage for future generations.",
       imageUrl: "https://images.unsplash.com/photo-1606131731446-5568d87113aa?q=80&w=1000&auto=format&fit=crop"
     }
   ];
@@ -59,7 +60,7 @@ const Index = () => {
     {
       icon: <Sparkles className="w-6 h-6" />,
       title: "Cultural Heritage",
-      description: "Honoring our rich cultural traditions by incorporating tribal elements into contemporary designs."
+      description: "Honoring rich cultural traditions by incorporating heritage elements into contemporary designs."
     },
     {
       icon: <Leaf className="w-6 h-6" />,
@@ -184,9 +185,9 @@ const Index = () => {
                   The Legacy of Bani Saad
                 </h2>
                 <p className="text-gray-600">
-                  Inspired by the rich cultural tapestry of the Bani Saad tribe, our mission is to empower 
-                  women globally to reclaim their narratives through exquisite fashion and timeless jewelry. 
-                  We believe that when women thrive, communities flourish.
+                  Inspired by rich cultural heritage, our mission is to empower women globally to reclaim 
+                  their narratives through exquisite fashion and timeless jewelry. We believe that when 
+                  women thrive, communities flourish.
                 </p>
                 <p className="text-gray-600">
                   Our commitment to elegance extends beyond aesthetics; it is woven into the very fabric 

@@ -46,7 +46,7 @@ const Collections = () => {
     {
       id: "fashion",
       title: "Fashion Collection",
-      description: "Our clothing line embraces the rich textile traditions of our heritage while offering modern silhouettes that celebrate the beauty and strength of women. From casual wear to statement pieces, our fashion collection empowers through elegance.",
+      description: "Our clothing line embraces rich textile traditions while offering modern silhouettes that celebrate the beauty and strength of women. From casual wear to statement pieces, our fashion collection empowers through elegance.",
       features: [
         "Sustainable and ethical fabrics",
         "Traditional embroidery techniques",
@@ -61,12 +61,12 @@ const Collections = () => {
     {
       id: "heritage",
       title: "Heritage Line",
-      description: "The Heritage Line pays homage to the rich cultural tapestry of the Bani Saad tribe. These limited edition pieces feature intricate designs and symbols that have been passed down through generations, preserving our cultural legacy.",
+      description: "The Heritage Line pays homage to rich cultural traditions. These limited edition pieces feature intricate designs and symbols that have been passed down through generations, preserving cultural legacy.",
       features: [
-        "Designs inspired by tribal symbols",
+        "Designs inspired by traditional symbols",
         "Limited edition collections",
         "Educational component with each piece",
-        "Collaborative projects with tribal elders",
+        "Collaborative projects with community elders",
         "Revival of traditional techniques",
         "Premium materials and craftsmanship"
       ],

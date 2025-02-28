@@ -73,9 +73,9 @@ const OurStory = () => {
                 <div className="space-y-4 text-gray-600">
                   <p className="italic text-lg text-gray-700">
                     "At Bani Saad, we are not just a fashion line; we are a movement that redefines the 
-                    intersection of heritage and modernity. Inspired by the rich cultural tapestry of the 
-                    Bani Saad tribe, our mission is to empower women globally to reclaim their narratives 
-                    through exquisite fashion and timeless jewelry."
+                    intersection of heritage and modernity. Inspired by rich cultural traditions, our mission 
+                    is to empower women globally to reclaim their narratives through exquisite fashion 
+                    and timeless jewelry."
                   </p>
                   <p>
                     Growing up surrounded by the artistry and traditions of my community, I witnessed 
@@ -85,7 +85,7 @@ const OurStory = () => {
                   </p>
                   <p>
                     This brand was born from my desire to create pathways for these talented women to 
-                    achieve economic independence while preserving our rich heritage. Each piece in our 
+                    achieve economic independence while preserving rich heritage. Each piece in our 
                     collections represents not just exceptional craftsmanship but also a step toward 
                     a world where women's creativity and contributions are valued and celebrated.
                   </p>
