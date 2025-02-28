@@ -109,13 +109,13 @@ const Footer = () => {
                 <MapPin className="mr-3 h-5 w-5 text-fashion-500 mt-1 flex-shrink-0" />
                 <span className="text-gray-600">
                   123 Fashion Avenue, Suite 101<br />
-                  Riyadh, Saudi Arabia
+                  New York, NY 10001
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone className="mr-3 h-5 w-5 text-fashion-500 flex-shrink-0" />
-                <a href="tel:+966123456789" className="text-gray-600 hover:text-primary transition-colors duration-300">
-                  +966 12 345 6789
+                <a href="tel:+12123456789" className="text-gray-600 hover:text-primary transition-colors duration-300">
+                  +1 (212) 345-6789
                 </a>
               </li>
               <li className="flex items-center">
