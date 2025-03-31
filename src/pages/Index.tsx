@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -35,19 +34,22 @@ const Index = () => {
       icon: <Gem className="w-6 h-6" />,
       title: "Exquisite Jewelry",
       description: "Timeless pieces that celebrate feminine grace and power through traditional craftsmanship and modern design.",
-      imageUrl: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop"
+      imageUrl: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop",
+      collectionId: "jewelry"
     },
     {
       icon: <ShoppingBag className="w-6 h-6" />,
       title: "Elegant Fashion",
       description: "Clothing that blends cultural heritage with contemporary aesthetics, creating unique expressions of identity.",
-      imageUrl: "https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?q=80&w=1000&auto=format&fit=crop"
+      imageUrl: "https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?q=80&w=1000&auto=format&fit=crop",
+      collectionId: "fashion"
     },
     {
       icon: <Heart className="w-6 h-6" />,
       title: "Heritage Collection",
       description: "Designs inspired by rich cultural traditions, preserving heritage for future generations.",
-      imageUrl: "https://images.unsplash.com/photo-1606131731446-5568d87113aa?q=80&w=1000&auto=format&fit=crop"
+      imageUrl: "https://images.unsplash.com/photo-1606131731446-5568d87113aa?q=80&w=1000&auto=format&fit=crop",
+      collectionId: "heritage"
     }
   ];
 
@@ -122,13 +124,14 @@ const Index = () => {
                   title={collection.title}
                   description={collection.description}
                   imageUrl={collection.imageUrl}
+                  collectionId={collection.collectionId}
                 />
               ))}
             </div>
             
             <div className="text-center mt-12 animate-on-scroll">
               <a 
-                href="https://banisaad.myshopify.com"
+                href="https://banisaad.myshopify.com/collections/all"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-medium rounded-md transition-all duration-300 hover:bg-primary/90"
@@ -264,7 +267,7 @@ const Index = () => {
               </p>
               <div className="animate-on-scroll">
                 <a 
-                  href="https://banisaad.myshopify.com" 
+                  href="https://banisaad.myshopify.com/collections/all" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-8 py-3 bg-primary text-white font-medium rounded-md transition-all duration-300 hover:bg-primary/90"

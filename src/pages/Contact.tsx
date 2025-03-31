@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { Heart, Globe, Star, ShoppingBag } from 'lucide-react';
 import Navigation from '@/components/Navigation';
@@ -192,7 +191,7 @@ const OurStory = () => {
                   </div>
                   <div className="order-2 md:order-2 md:w-1/2 pt-4 md:pt-0 md:pl-10">
                     <img 
-                      src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?q=80&w=500&auto=format&fit=crop" 
+                      src="https://images.unsplash.com/photo-1617038260897-8f129e1688ce?q=80&w=500&auto=format&fit=crop" 
                       alt="Beginning of Bani Saad" 
                       className="rounded-lg shadow-md"
                     />
@@ -300,7 +299,7 @@ const OurStory = () => {
               </p>
               <div className="animate-on-scroll">
                 <a 
-                  href="https://banisaad.myshopify.com" 
+                  href="https://banisaad.myshopify.com/collections/all" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-8 py-3 bg-primary text-white font-medium rounded-md transition-all duration-300 hover:bg-primary/90"

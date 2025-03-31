@@ -64,7 +64,7 @@ const Navigation = () => {
 
         {/* Shop Button */}
         <a 
-          href="https://banisaad.myshopify.com" 
+          href="https://banisaad.myshopify.com/collections/all" 
           target="_blank" 
           rel="noopener noreferrer"
           className="hidden md:flex items-center space-x-2 bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-md transition-colors"
@@ -114,7 +114,7 @@ const Navigation = () => {
             ))}
             <li>
               <a 
-                href="https://banisaad.myshopify.com" 
+                href="https://banisaad.myshopify.com/collections/all" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 bg-primary text-white px-4 py-2 rounded-md w-full justify-center"

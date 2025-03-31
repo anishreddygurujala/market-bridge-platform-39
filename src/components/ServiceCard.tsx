@@ -6,9 +6,10 @@ interface ServiceCardProps {
   title: string;
   description: string;
   imageUrl?: string;
+  collectionId?: string;
 }
 
-const ServiceCard = ({ icon, title, description, imageUrl }: ServiceCardProps) => {
+const ServiceCard = ({ icon, title, description, imageUrl, collectionId = 'all' }: ServiceCardProps) => {
   return (
     <div className="group bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 card-hover animate-on-scroll">
       {imageUrl && (
@@ -33,7 +34,7 @@ const ServiceCard = ({ icon, title, description, imageUrl }: ServiceCardProps) =
         
         <div className="pt-2">
           <a 
-            href="https://banisaad.myshopify.com" 
+            href={`https://banisaad.myshopify.com/collections/${collectionId}`} 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center text-sm font-medium text-primary group-hover:text-fashion-800"
