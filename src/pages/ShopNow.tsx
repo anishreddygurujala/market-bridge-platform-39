@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Gem, ShoppingBag, Heart } from 'lucide-react';
 import Navigation from '@/components/Navigation';
@@ -9,79 +8,11 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from '@/components/ui/pagination';
 
-// Sample products data
-const productsData = [
-  {
-    id: "1",
-    name: "Gold Hoop Earrings",
-    description: "Elegant gold hoop earrings with intricate detailing, perfect for both casual and formal occasions.",
-    price: 89.99,
-    imageUrl: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop",
-    category: "jewelry"
-  },
-  {
-    id: "2",
-    name: "Silver Pendant Necklace",
-    description: "Handcrafted silver pendant with traditional motifs, representing strength and resilience.",
-    price: 129.99,
-    imageUrl: "https://images.unsplash.com/photo-1563294162-7278d3a232ce?q=80&w=1000&auto=format&fit=crop",
-    category: "jewelry"
-  },
-  {
-    id: "3",
-    name: "Embroidered Silk Kaftan",
-    description: "Luxurious silk kaftan with hand-embroidered details, celebrating artisanal craftsmanship.",
-    price: 249.99,
-    imageUrl: "https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?q=80&w=1000&auto=format&fit=crop",
-    category: "fashion"
-  },
-  {
-    id: "4",
-    name: "Heritage Bracelet",
-    description: "A stunning bracelet inspired by traditional designs with modern elements.",
-    price: 179.99,
-    imageUrl: "https://images.unsplash.com/photo-1606131731446-5568d87113aa?q=80&w=1000&auto=format&fit=crop",
-    category: "heritage"
-  },
-  {
-    id: "5",
-    name: "Modern Abaya Design",
-    description: "Contemporary abaya design featuring subtle embellishments and premium fabric.",
-    price: 299.99,
-    imageUrl: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1000&auto=format&fit=crop",
-    category: "fashion"
-  },
-  {
-    id: "6",
-    name: "Gemstone Ring",
-    description: "Exquisite ring featuring ethically sourced gemstones with a unique setting.",
-    price: 159.99,
-    imageUrl: "https://images.unsplash.com/photo-1598560917505-59a3ad559071?q=80&w=1000&auto=format&fit=crop",
-    category: "jewelry"
-  },
-  {
-    id: "7",
-    name: "Handwoven Shawl",
-    description: "Intricately handwoven shawl using traditional techniques and premium materials.",
-    price: 119.99,
-    imageUrl: "https://images.unsplash.com/photo-1572922641334-118cbc0f8302?q=80&w=1000&auto=format&fit=crop",
-    category: "heritage"
-  },
-  {
-    id: "8",
-    name: "Statement Cuff",
-    description: "Bold cuff bracelet blending traditional craftsmanship with contemporary styling.",
-    price: 149.99,
-    imageUrl: "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?q=80&w=1000&auto=format&fit=crop",
-    category: "jewelry"
-  }
-];
-
 const ShopNow = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const { addToCart, toggleFavorite, isInFavorites, cartCount, favoritesCount } = useProducts();
+  const { addToCart, toggleFavorite, isInFavorites, cartCount, favoritesCount, products } = useProducts();
   const itemsPerPage = 4;
 
   useEffect(() => {
@@ -114,8 +45,8 @@ const ShopNow = () => {
 
   // Filter products by category if needed
   const filteredProducts = selectedCategory
-    ? productsData.filter(product => product.category === selectedCategory)
-    : productsData;
+    ? products.filter(product => product.category === selectedCategory)
+    : products;
 
   // Calculate pagination
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
