@@ -10,26 +10,29 @@ import Collections from "./pages/Services";
 import OurStory from "./pages/Contact";
 import ShopNow from "./pages/ShopNow";
 import NotFound from "./pages/NotFound";
+import { ProductsProvider } from "./context/ProductsContext";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Collections />} />
-          <Route path="/contact" element={<OurStory />} />
-          <Route path="/shop" element={<ShopNow />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
+    <ProductsProvider>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Collections />} />
+            <Route path="/contact" element={<OurStory />} />
+            <Route path="/shop" element={<ShopNow />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </ProductsProvider>
   </QueryClientProvider>
 );
 
