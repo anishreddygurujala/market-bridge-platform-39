@@ -87,6 +87,14 @@ export const productsData = [
     price: 99.00,
     imageUrl: "/lovable-uploads/c3e1aa61-7263-4974-844a-2bba0b9bc718.png",
     category: "jewelry"
+  },
+  {
+    id: "10",
+    name: "Lapis Lazuli and Indian Emeralds Pendant",
+    description: "Exquisite pendant featuring genuine Lapis Lazuli stone surrounded by Indian emeralds in a traditional gold-tone setting.",
+    price: 279.99,
+    imageUrl: "/lovable-uploads/45af4b38-fc85-4ca9-8de7-4690e9be0ba1.png",
+    category: "jewelry"
   }
 ];
 
