@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { ShoppingCart, Heart } from 'lucide-react';
+import { ShoppingCart, Heart, ImageOff } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { toast } from '@/hooks/use-toast';
@@ -23,6 +23,7 @@ interface ProductCardProps {
 
 const ProductCard = ({ product, onAddToCart, onAddToFavorites, isFavorite }: ProductCardProps) => {
   const [isAddingToCart, setIsAddingToCart] = useState(false);
+  const [imageError, setImageError] = useState(false);
   
   const handleAddToCart = () => {
     setIsAddingToCart(true);
@@ -53,14 +54,26 @@ const ProductCard = ({ product, onAddToCart, onAddToFavorites, isFavorite }: Pro
     }).format(price);
   };
 
+  const handleImageError = () => {
+    console.log(`Image failed to load: ${product.imageUrl}`);
+    setImageError(true);
+  };
+
   return (
     <Card className="overflow-hidden transition-all duration-300 h-full flex flex-col hover:shadow-md animate-on-scroll">
-      <div className="relative aspect-square overflow-hidden">
-        <img 
-          src={product.imageUrl} 
-          alt={product.name}
-          className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
-        />
+      <div className="relative aspect-square overflow-hidden bg-gray-100">
+        {!imageError ? (
+          <img 
+            src={product.imageUrl} 
+            alt={product.name}
+            className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
+            onError={handleImageError}
+          />
+        ) : (
+          <div className="flex items-center justify-center w-full h-full text-gray-400">
+            <ImageOff className="h-12 w-12" />
+          </div>
+        )}
         <button
           onClick={handleAddToFavorites}
           className={`absolute top-2 right-2 p-2 rounded-full ${
