@@ -47,15 +47,13 @@ const Hero = () => {
             </div>
             
             <div className="animate-on-scroll flex flex-col sm:flex-row gap-4">
-              <a 
-                href="https://banisaad.myshopify.com/collections/all" 
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link 
+                to="/shop"
                 className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-medium rounded-md transition-all duration-300 hover:bg-primary/90"
               >
                 Shop Collection
                 <ShoppingBag className="ml-2 h-4 w-4" />
-              </a>
+              </Link>
               
               <Link 
                 to="/about" 

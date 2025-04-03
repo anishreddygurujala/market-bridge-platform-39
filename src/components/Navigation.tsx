@@ -63,15 +63,13 @@ const Navigation = () => {
         </nav>
 
         {/* Shop Button */}
-        <a 
-          href="https://banisaad.myshopify.com/collections/all" 
-          target="_blank" 
-          rel="noopener noreferrer"
+        <NavLink 
+          to="/shop" 
           className="hidden md:flex items-center space-x-2 bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-md transition-colors"
         >
           <ShoppingBag className="h-4 w-4" />
           <span>Shop Now</span>
-        </a>
+        </NavLink>
 
         {/* Mobile Menu Button */}
         <button 
@@ -113,16 +111,14 @@ const Navigation = () => {
               </li>
             ))}
             <li>
-              <a 
-                href="https://banisaad.myshopify.com/collections/all" 
-                target="_blank" 
-                rel="noopener noreferrer"
+              <NavLink 
+                to="/shop"
                 className="flex items-center space-x-2 bg-primary text-white px-4 py-2 rounded-md w-full justify-center"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <ShoppingBag className="h-4 w-4" />
                 <span>Shop Now</span>
-              </a>
+              </NavLink>
             </li>
           </ul>
         </nav>
